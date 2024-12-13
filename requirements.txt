@@ -1,0 +1,7 @@
+streamlit
+opencv-python
+numpy
+pandas
+keras==3.5.0
+tensorflow==2.17.1
+xlsxwriter

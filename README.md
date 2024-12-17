@@ -29,7 +29,7 @@
 #### Output od SLIC algorithm
 ![image](https://github.com/user-attachments/assets/ff456b41-8d22-4cae-ab6e-e49bf95fb36f)
 
-### METAL ANALYSIS PARAMETERS
+## METAL ANALYSIS PARAMETERS
 #### Fraction of Melted Region
 #### This represents the portion of the metal coating that has melted during the process, as determined by the segmentation of the melted regions in the microscopic image. It gives insights into the extent of melting in the coating, which can influence material properties.
 
@@ -47,7 +47,7 @@
 #### Area of Contour
 #### The area of the contour corresponds to the size of an object (e.g., pore or particle) in the segmented image. This measurement helps quantify the extent of each particle or pore, providing insights into the coating’s texture and uniformity
 
-### METHADOLOGY
+## METHADOLOGY
 #### The methodology for this project is divided into two key ap- proaches: Traditional Image Processing and Deep Learning- based Segmentation using U-Net. These methods are applied to analyze the metal coating cross-sections, segment the undissolved white particles, and perform various analyses, such as calculating the fraction of melted and unmelted regions, pore sizes, aspect ratios, and contours of the pores.
 
 #### •	Traditional Image Processing Approach
@@ -60,6 +60,38 @@
 #### –	Step 4: Image Segmentation
 #### Thresholding: A binary thresholding technique is applied to segment the image into melted and un- melted regions. This process is typically enhanced by analyzing pixel intensities.We used threshold value 140.
 
- 
+#### •	Deep Learning-Based Approach (U-Net Segmenta- tion)
+#### –	Step 1: Dataset Preparation
+#### Image and Mask Generation: The traditional image processing method’s output (segmentation masks) is used to create a training dataset for the U-Net model. These masks label the melted and unmelted regions.
+#### –	Step 2: Model Architecture (U-Net with ResNet Backbone)
+#### U-Net Architecture: The U-Net model, which con- sists of an encoder-decoder architecture, is used for image segmentation. The encoder captures context, and the decoder enables precise localization, mak- ing it ideal for tasks like the segmentation of pores and particles in metal coatings.
+#### ResNet Backbone: The encoder part of the U-Net is enhanced with a pre-trained ResNet-50 backbone to improve feature extraction, especially for high- level features and to reduce model training time.
+#### –	Step 3:Training the Model
+#### Model Training: The U-Net model is trained us- ing the pre-processed images and masks generated from the traditional method. The training process uses the binary crossentropy and Intersection over Union (IoU) metrics as loss functions for accurate segmentation.
+#### Augmentation: Data augmentation techniques like rotation, flipping, and zooming are used to increase the model’s generalization capabilities.
+#### –	Step 4: Post-Processing
+#### Segmentation Results: Once the model is trained, it is used to segment the input images. The output is a binary mask where the melted and unmelted regions are distinctly labeled.
+#### –	Step 5: Performance Evaluation
+#### Accuracy and IoU: The performance of the U-Net model is evaluated using accuracy and IoU (Inter- section over Union) scores. The model achieved an accuracy of 89% and an IoU of 79%, indicating good segmentation performance.
+#### •	Software Development (Streamlit Interface)
+#### –	Step 1: Interface Design
+#### Streamlit Interface: A web-based interface is de- veloped using Streamlit to allow users to interact with the system. The interface enables users to upload microscopic images, run both the traditional and deep learning-based segmentation methods, and view the results.
+#### –	Step 2: Result Visualization
+#### Displaying Results: The software visualizes vari- ous analyses, including the fraction of melted and unmelted regions, pore size and aspect ratio, and the area of contours, using interactive plots and images.
+#### –	Step 3: Analysis Outputs
+#### Detailed Metrics: The interface calculates and displays detailed metrics, such as the fraction of melted regions, unmelted regions, pore size, aspect ratio, and area of contours. The user can easily interpret these metrics to assess the quality and uniformity of the metal coating. And allowed to download as Excel format.
+
+## RESULTS
+#### Original Microscopic metal coating Image
+![image](https://github.com/user-attachments/assets/85ff736f-ac81-40e0-9b9d-c204fe06fe70)
+
+#### Segmentation from UNet Model
+![image](https://github.com/user-attachments/assets/8ef5a997-2413-429e-8796-dee2a2558857)
+
+#### Drawn a boundary around Segmented pores
+![image](https://github.com/user-attachments/assets/ae48e9c9-d970-4c59-b6e3-53969954e99a)
+
+
+
 
 

@@ -12,8 +12,10 @@
 #### 1)	Histogram Equalization
 #### Histogram Equalization is a fundamental image processing technique used to improve the contrast of an image. It works by redistributing the intensity values of the pix- els in an image so that they span the full range of possible values. This redistribution is done by modifying the cumulative distribution function (CDF) of the image histogram, leading to a more uniform intensity distribution.The histogram of an image represents the distribution of pixel intensity values.In a low-contrast image, the his- togram is often narrow and concentrated in a specific in- tensity range.Histogram Equalization spreads out the most frequent intensity values, thereby enhancing the contrast of the image.The transformation function is derived from the cumulative histogram, mapping the input intensity levels to new output levels that have a uniform distribution across the available intensity range.
 
-##![image](https://github.com/user-attachments/assets/e5bb2823-d42f-4925-a7ed-35b6c457eb9e)  
-##![image](https://github.com/user-attachments/assets/a36f88eb-97f3-4b60-ab2f-487bbba7b16b)
+#### Original Image
+![image](https://github.com/user-attachments/assets/e5bb2823-d42f-4925-a7ed-35b6c457eb9e)  
+#### Histogram Equalized Image
+![image](https://github.com/user-attachments/assets/a36f88eb-97f3-4b60-ab2f-487bbba7b16b)
   
 
 

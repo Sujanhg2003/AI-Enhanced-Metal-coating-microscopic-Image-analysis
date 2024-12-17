@@ -85,11 +85,14 @@
 #### Original Microscopic metal coating Image
 ![image](https://github.com/user-attachments/assets/85ff736f-ac81-40e0-9b9d-c204fe06fe70)
 
+#### Basically the dark particles the powder coating melted region and white circular pores are unmelted regions
+
 #### Segmentation from UNet Model
 ![image](https://github.com/user-attachments/assets/8ef5a997-2413-429e-8796-dee2a2558857)
 
 #### Drawn a boundary around Segmented pores
 ![image](https://github.com/user-attachments/assets/ae48e9c9-d970-4c59-b6e3-53969954e99a)
+
 
 
 

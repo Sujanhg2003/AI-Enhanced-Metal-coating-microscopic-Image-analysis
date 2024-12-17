@@ -16,6 +16,22 @@
 ![image](https://github.com/user-attachments/assets/e5bb2823-d42f-4925-a7ed-35b6c457eb9e)  
 #### Histogram Equalized Image
 ![image](https://github.com/user-attachments/assets/a36f88eb-97f3-4b60-ab2f-487bbba7b16b)
+
+#### 2)Contrast Limited Adaptive Histogram Equalization 
+#### CLAHE (Contrast Limited Adaptive Histogram Equaliza- tion) is an image enhancement technique that improves the contrast of images, particularly in cases where the lighting conditions are poor or the images have low contrast. CLAHEis an extension of the Adaptive Histogram Equalization (AHE) method, with an added step to prevent noise ampli- fication.
+#### The CLAHE works by dividing images into small regions known as tiles or blocks (e.g., 8x8 or 16x16 pixels). His- togram equalization is applied to each tile independently. This redistributes the pixel intensity values to enhance lo- cal contrast within each tile. After processing all the tiles, CLAHE blends the enhanced regions together to avoid the blocky appearance that can occur at tile boundaries. This is done through bilinear interpolation, where pixel values at the boundaries of tiles are smoothly adjusted to maintain continuity across the entire image. Compared to Histogram equalization technique,CLAHE give good result to our data at clipLimit 10 by removing noises.
+
+#### CLAHE applied  Image
+![image](https://github.com/user-attachments/assets/04d6270d-4c61-42f4-8b19-e7834b8caffe)
+
+#### SLIC Algorithm
+#### The SLIC (Simple Linear Iterative Clustering) algorithm is a widely-used method for generating superpixels. It is known for its simplicity, efficiency, and ability to produce compact, uniform superpixels that adhere well to object boundaries in an image.SLIC typically operates in the CIELAB color space, which is designed to be more perceptually uniform than the RGB color space. This means that the Euclidean distance in CIELAB better corresponds to the perceived color difference. SLIC uses a modified k-means clustering approach to group pixels into superpixels. Unlike traditional k-means, SLIC incorporates spatial information to ensure that superpixels are spatially compact. The image is divided into a grid of initial cluster centers, spaced approximately S pixels apart, where S is the desired average size of the superpixels.
+#### Output od SLIC algorithm
+![image](https://github.com/user-attachments/assets/ff456b41-8d22-4cae-ab6e-e49bf95fb36f)
+
+
+
+
   
 
 

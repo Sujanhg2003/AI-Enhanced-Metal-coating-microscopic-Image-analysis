@@ -29,11 +29,37 @@
 #### Output od SLIC algorithm
 ![image](https://github.com/user-attachments/assets/ff456b41-8d22-4cae-ab6e-e49bf95fb36f)
 
+### METAL ANALYSIS PARAMETERS
+#### Fraction of Melted Region
+#### This represents the portion of the metal coating that has melted during the process, as determined by the segmentation of the melted regions in the microscopic image. It gives insights into the extent of melting in the coating, which can influence material properties.
 
+#### Fraction of Unmelted Region
+#### This represents the por- tion of the metal coating that has not melted, i.e., the unmelted particles or solidified areas. This metric helps assess the uniformity of the melting process and the presence of any defects.
 
+#### Height and Width of Pores 
+#### These dimensions repre- sent the size of the pores found in the coating. Pores may indicate defects in the material, affecting its strength and performance. Measuring their size is essential for quality control.
+##### Height (h) = The vertical distance between the top and bottom points of a pore (in the segmented image).
+##### Width (w) = The horizontal distance between the left and right points of a pore. These measurements can be calculated from the bounding box around each pore in the segmented image.
 
-  
+#### Aspect Ratio
+#### The aspect ratio is the ratio of the width to the height of a pore. This parameter helps character- ize the shape of pores, distinguishing between circular, elliptical, or irregular shapes.
 
+#### Area of Contour
+#### The area of the contour corresponds to the size of an object (e.g., pore or particle) in the segmented image. This measurement helps quantify the extent of each particle or pore, providing insights into the coating’s texture and uniformity
 
+### METHADOLOGY
+#### The methodology for this project is divided into two key ap- proaches: Traditional Image Processing and Deep Learning- based Segmentation using U-Net. These methods are applied to analyze the metal coating cross-sections, segment the undissolved white particles, and perform various analyses, such as calculating the fraction of melted and unmelted regions, pore sizes, aspect ratios, and contours of the pores.
+
+#### •	Traditional Image Processing Approach
+#### – Step 1: Image Preprocessing
+#### CLAHE (Contrast Limited Adaptive Histogram Equalization): Used to further improve the con- trast in local regions of the image, ensuring that the boundaries of small pores are well-defined and noise is reduced.
+#### –	Step 2: Noise Reduction
+#### Denoising Algorithms: Methods like Gaussian fil- tering or median filtering are applied to reduce im- age noise, ensuring that the segmentation process is not affected by irrelevant pixel variations.
+#### –	Step 3: Superpixel Segmentation
+#### SLIC Algorithm: Used to divide the image into small, uniform regions. This method helps address issues related to the discontinuity of boundaries in the image, as superpixels group pixels with similar properties, leading to smoother transitions between segments.
+#### –	Step 4: Image Segmentation
+#### Thresholding: A binary thresholding technique is applied to segment the image into melted and un- melted regions. This process is typically enhanced by analyzing pixel intensities.We used threshold value 140.
+
+ 
 
 
